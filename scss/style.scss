@@ -10,17 +10,16 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 25fr 1fr;
     background-color: $primary-bright;
-    // grid-gap: 30px
     height: 100vh;
 }
 
 .header{
     grid-area: h;
-    background-color: $black;
-    color: $white;
+    background-color: $secondary-bright;
+    color: $black;
     border: 0.1vw solid $black;
-    font-family: $secondary-font;
-    font-size: 3vw;
+    font-family: $third-font;
+    font-size: 4vw;
     font-weight: bold;
     text-align: center;
 }
@@ -42,24 +41,21 @@
 }
 
 .player1Score, .player2Score{
-    margin:auto;
-    font-size: 2vw;
+    // margin:auto;
+    text-align: center;
+    padding-top: 1.5vh;
+    font-size: 1.5vw;
     font-weight: bold;
-
+    background-color: $secondary-bright;
  }
+
 .startButton{
     grid-area: s;
     background-color: $black;
     color: $white;
     border: 0.1vw solid $black;
     font-family: $secondary-font;
-    font-size: 3vw;   
-}
-
-
-.board{
-    display:grid;
-    border: 1vh solid rgb(39, 1, 1);
+    font-size: 2vw;   
 }
 
 .tile{
@@ -69,7 +65,8 @@
 
 .food{
     // background-image: url(https://www.wellnesspetfood.com/sites/default/files/2018-06/TruFood%20Make%20it%20Fresh_dog_2.gif);
-    background-image: url(https://www.wellnesspetfood.com/sites/default/files/inline-images/Complete%20Health%20Gravies_cat_0.gif);
+    // background-image: url(https://www.wellnesspetfood.com/sites/default/files/inline-images/Complete%20Health%20Gravies_cat_0.gif);
+    background-image: url(https://www.hillspet.com/content/dam/pim/hills/en_us/pd/dry/pd-metabolic-canine-lamb-meal-and-rice-formula-dry-productKibble_500.png);
     background-size: cover;
     background-position: center;
     background-size: 30%;
@@ -86,30 +83,31 @@
 
 .player2{
     // background-image: url(https://media2.giphy.com/media/H1XUAkniijT15flKaD/giphy.gif);
-    background-image: url(https://i.embed.ly/1/display/resize?width=800&height=800&key=3e750996b20f47be9451da09d3fffa5b&url=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2F8DTEMy7fSrzgI%2Fgiphy.gif);
-    // background-image: url(http://forgifs.com/gallery/d/248904-2/Puppy-dog-shaking-head.gif);
+    // background-image: url(https://i.embed.ly/1/display/resize?width=800&height=800&key=3e750996b20f47be9451da09d3fffa5b&url=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2F8DTEMy7fSrzgI%2Fgiphy.gif);
     // background-image: url(https://cdn.dribbble.com/users/974793/screenshots/4132585/___2.gif);
     // background-image: url(https://media3.giphy.com/media/16StbF7VCSw6Y/giphy.webp?cid=790b76115d41e90d4d4b306a73495d5e&rid=giphy.webp);
+    background-image: url(https://media.giphy.com/media/Jnhj5zGkYQfK0/giphy.gif);
     background-size: cover;
     background-position: center;
-    background-size: 60%;
+    background-size: 30%;
     background-repeat: no-repeat;
 }
 
 .boardSize{
     display: none;
     position: absolute;
-    background-color: $primary-bright; 
+    background-color: $secondary-bright; 
     color: $accent;
     height: 40vh;
-    width: 40vw;
-    top:30vh;
-    left: 30vw;
+    width: 20vw;
+    top:20vh;
+    left: 40vw;
     border: 1px solid $secondary-dark;
     text-align: center;
     align-content: center;
     font-weight: bold;
     font-size: 2vw;
+    padding: 2vw 2vh;
 
     input{
         width: 4vw;
@@ -118,16 +116,16 @@
         text-align: center;
     }
 
-    .enterSizeButton{
-        width: 10vw;
-        background-color: $black;
-        color: $white;
-        border: 0.1vw solid $black;
-        font-family: $secondary-font;
-        font-size: 2vw; 
-        margin: auto;
-    }
-
+    
 }
 
+.enterSizeButton{
+    width: 10vw;
+    background-color: $black;
+    color: $white;
+    border: 0.1vw solid $black;
+    font-family: $secondary-font;
+    font-size: 2vw; 
+    margin: auto;
+}
 
