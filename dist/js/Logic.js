@@ -64,7 +64,6 @@ class Logic extends Matrix{
     generateFood(){
         let numOfFood = Math.floor(this.x*this.y/this.density)
         let i = 0
-        console.log(this.metrix)
         while (i<numOfFood){
             let x = this.generateRandomNum(this.x+1)
             let y = this.generateRandomNum(this.y+1)
@@ -86,5 +85,4 @@ class Logic extends Matrix{
 
     }
 
-    
 }

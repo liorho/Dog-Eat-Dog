@@ -7,7 +7,7 @@
     'h h h'
     'b b b'
     'p1 s p2';
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 25fr 1fr;
     background-color: $primary-bright;
     // grid-gap: 30px
@@ -37,6 +37,16 @@
     grid-area: p1;
 }
 
+.player2Score{
+    grid-area: p2;
+}
+
+.player1Score, .player2Score{
+    margin:auto;
+    font-size: 2vw;
+    font-weight: bold;
+
+ }
 .startButton{
     grid-area: s;
     background-color: $black;
@@ -46,9 +56,6 @@
     font-size: 3vw;   
 }
 
-.player2Score{
-    grid-area: p2;
-}
 
 .board{
     display:grid;
@@ -89,14 +96,38 @@
     background-repeat: no-repeat;
 }
 
-// .boardSize{
-//     position: absolute;
-//     background-color: $secondary-bright;
-//     color: $accent;
-//     height: 50vh;
-//     width: 50vw;
-//     top:50%;
-//     left: 50%;
-// }
+.boardSize{
+    display: none;
+    position: absolute;
+    background-color: $primary-bright; 
+    color: $accent;
+    height: 40vh;
+    width: 40vw;
+    top:30vh;
+    left: 30vw;
+    border: 1px solid $secondary-dark;
+    text-align: center;
+    align-content: center;
+    font-weight: bold;
+    font-size: 2vw;
+
+    input{
+        width: 4vw;
+        height: 7vh;
+        font-size: 2vw;
+        text-align: center;
+    }
+
+    .enterSizeButton{
+        width: 10vw;
+        background-color: $black;
+        color: $white;
+        border: 0.1vw solid $black;
+        font-family: $secondary-font;
+        font-size: 2vw; 
+        margin: auto;
+    }
+
+}
 
 

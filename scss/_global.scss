@@ -1,8 +1,8 @@
 // VARIABLES
 $primary-dark: rgb(47, 48, 51) ;
-$primary-bright: rgb(175, 182, 204) ;
+$primary-bright: rgb(207, 211, 224) ;
 $secondary-dark: rgb(44, 0, 0) ;
-$secondary-brigt: #E8CDB2 ;
+$secondary-bright: #E8CDB2 ;
 $accent: #1A4735 ;
 
 $primary-font: 'Roboto Mono', monospace;
@@ -34,15 +34,18 @@ body{
     height: 100%;
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
 .btn{
-    // padding: .5rem;
-    // border-radius: 6px;
     cursor: pointer;
     outline: none;
     border: none;
     font-weight: bold;
     text-align: center;
-    // margin: 0 0.5vw;
     transition: 0.5s;
     
     &:hover{
@@ -51,8 +54,4 @@ body{
         border-color: $white;
     }  
 
-    // &:active{
-    //     box-shadow: 0.1vw 0.1vw black;
-    //     transform: translateY(0.2vw);
-    // }
 }

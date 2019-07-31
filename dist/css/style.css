@@ -11,6 +11,12 @@ body {
   height: 100%;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .btn {
   cursor: pointer;
   outline: none;
@@ -32,11 +38,11 @@ body {
   display: -ms-grid;
   display: grid;
       grid-template-areas: 'h h h' 'b b b' 'p1 s p2';
-  -ms-grid-columns: 1fr 3fr 1fr;
-      grid-template-columns: 1fr 3fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: 1fr 25fr 1fr;
       grid-template-rows: 1fr 25fr 1fr;
-  background-color: #afb6cc;
+  background-color: #cfd3e0;
   height: 100vh;
 }
 
@@ -73,6 +79,18 @@ body {
   grid-area: p1;
 }
 
+.player2Score {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: p2;
+}
+
+.player1Score, .player2Score {
+  margin: auto;
+  font-size: 2vw;
+  font-weight: bold;
+}
+
 .startButton {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
@@ -82,12 +100,6 @@ body {
   border: 0.1vw solid #2d3436;
   font-family: "Saira Stencil One", cursive;
   font-size: 3vw;
-}
-
-.player2Score {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-  grid-area: p2;
 }
 
 .board {
@@ -123,5 +135,39 @@ body {
   background-position: center;
   background-size: 60%;
   background-repeat: no-repeat;
+}
+
+.boardSize {
+  display: none;
+  position: absolute;
+  background-color: #cfd3e0;
+  color: #1A4735;
+  height: 40vh;
+  width: 40vw;
+  top: 30vh;
+  left: 30vw;
+  border: 1px solid #2c0000;
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  font-weight: bold;
+  font-size: 2vw;
+}
+
+.boardSize input {
+  width: 4vw;
+  height: 7vh;
+  font-size: 2vw;
+  text-align: center;
+}
+
+.boardSize .enterSizeButton {
+  width: 10vw;
+  background-color: #2d3436;
+  color: #f5f6fa;
+  border: 0.1vw solid #2d3436;
+  font-family: "Saira Stencil One", cursive;
+  font-size: 2vw;
+  margin: auto;
 }
 /*# sourceMappingURL=style.css.map */
