@@ -1,0 +1,127 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  color: #2d3436;
+  background-color: #f5f6fa;
+  width: 100%;
+  height: 100%;
+}
+
+.btn {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  text-align: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: #f5f6fa;
+  color: #2d3436;
+  border-color: #f5f6fa;
+}
+
+#container {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'h h h' 'b b b' 'p1 s p2';
+  -ms-grid-columns: 1fr 3fr 1fr;
+      grid-template-columns: 1fr 3fr 1fr;
+  -ms-grid-rows: 1fr 25fr 1fr;
+      grid-template-rows: 1fr 25fr 1fr;
+  background-color: #afb6cc;
+  height: 100vh;
+}
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: h;
+  background-color: #2d3436;
+  color: #f5f6fa;
+  border: 0.1vw solid #2d3436;
+  font-family: "Saira Stencil One", cursive;
+  font-size: 3vw;
+  font-weight: bold;
+  text-align: center;
+}
+
+.board-container {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #f5f6fa;
+}
+
+.player1Score {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: p1;
+}
+
+.startButton {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: s;
+  background-color: #2d3436;
+  color: #f5f6fa;
+  border: 0.1vw solid #2d3436;
+  font-family: "Saira Stencil One", cursive;
+  font-size: 3vw;
+}
+
+.player2Score {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: p2;
+}
+
+.board {
+  display: -ms-grid;
+  display: grid;
+  border: 1vh solid #270101;
+}
+
+.tile {
+  border: 0.05vw solid grey;
+  height: auto;
+}
+
+.food {
+  background-image: url(https://www.wellnesspetfood.com/sites/default/files/inline-images/Complete%20Health%20Gravies_cat_0.gif);
+  background-size: cover;
+  background-position: center;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+.player1 {
+  background-image: url(https://static.wixstatic.com/media/c03e75_c9dc0151d04e4ff3870d694602304f44~mv2.gif/v1/fill/w_302,h_403,al_c,q_90/file.jpg);
+  background-size: cover;
+  background-position: center;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+.player2 {
+  background-image: url(https://i.embed.ly/1/display/resize?width=800&height=800&key=3e750996b20f47be9451da09d3fffa5b&url=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2F8DTEMy7fSrzgI%2Fgiphy.gif);
+  background-size: cover;
+  background-position: center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+}
+/*# sourceMappingURL=style.css.map */
