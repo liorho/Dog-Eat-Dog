@@ -5,6 +5,7 @@ class Matrix {
     }
 
     generateMatrix(x, y){
+        this.matrix = []
         let counter = 1
         for (let i = 0 ; i< y ; i++){
             let row = []
@@ -54,6 +55,4 @@ class Matrix {
         }
 
     }
-
-
 }

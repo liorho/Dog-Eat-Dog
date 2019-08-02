@@ -1,102 +1,93 @@
 let logic
 const renderer = new Renderer()
 
-class Main {
-    
-    async startGame(){
-       renderer.displayBoardSizeMenu()
-       renderer.blurBackground()
+startGame = function () {
+    renderer.displayBoardSizeMenu()
+    renderer.blurBackground()
 
-        // Enter Dimensions Button
-        $(".enterSizeButton").on("click", function(){
-            let x =  $(this).closest(".boardSize").find(".xInput").val()          
-            let y =  $(this).closest(".boardSize").find(".yInput").val()        
-            if (x && y){
-                renderer.unBlurBackground()
-                renderer.hideBoardSizeMenu()
-                // let countDown = setInterval(() => {renderer.renderCountdown}, 1000)
-                logic = new Logic(x,y)
-                renderer.renderBoard(logic.matrix)
-                renderer.renderScores(logic.player1.score, logic.player2.score)
-            }
-
-        })
-    }
-
-    movePlayer(playerNum, direction){
-
-        
-    }
-
-    
-
+    // Enter Dimensions Button
+    $(".enterSizeButton").on("click", function () {
+        let x = $(this).closest(".boardSize").find(".xInput").val()
+        let y = $(this).closest(".boardSize").find(".yInput").val()
+        if (x && y) {
+            renderer.unBlurBackground()
+            renderer.hideBoardSizeMenu()
+            logic = new Logic(x, y)
+            renderer.renderBoard(logic.matrix)
+            renderer.renderScores(logic.player1.score, logic.player2.score)
+        }
+    })
 }
 
-const main = new Main()
+const renderAfterMove = function () {
+    renderer.renderBoard(logic.matrix)
+    renderer.renderScores(logic.player1.score, logic.player2.score)
+    let data = logic.isGameEnd()
+    if (data.endGame) {
+        setTimeout(function () {
+            renderer.renderEndGame(data)
+            document.onkeydown = function (e) {
+                location.reload()
+            }
+        } , 600)
+    }
+}
+
+
+
 //==================================================
 
-
-
-
 // Start button
-$(".startButton").on("click", function(){
-    main.startGame()
+$(".startButton").on("click", function () {
+    startGame()
 })
 
 // Player 1 keyboard keys
-$(document).keypress(function (e) {
-    
+$(document).keydown(function (e) {
+
     // Invoking w key
-    if (e.which == 119) {
+    if (e.which == 87) {
         logic.movePlayer(1, "up")
-        renderer.renderBoard(logic.matrix)
-        renderer.renderScores(logic.player1.score, logic.player2.score)
+        renderAfterMove()
     }
     // Invoking s key
-    if (e.which == 115) {
+    if (e.which == 83) {
         logic.movePlayer(1, "down")
-        renderer.renderBoard(logic.matrix)
-        renderer.renderScores(logic.player1.score, logic.player2.score)
+        renderAfterMove()
     }
     // Invoking a key
-    if (e.which == 97) {
+    if (e.which == 65) {
         logic.movePlayer(1, "left")
-        renderer.renderBoard(logic.matrix)
-        renderer.renderScores(logic.player1.score, logic.player2.score)
+        renderAfterMove()
     }
     // Invoking d key
-    if (e.which == 100) {
+    if (e.which == 68) {
         logic.movePlayer(1, "right")
-        renderer.renderBoard(logic.matrix)
-        renderer.renderScores(logic.player1.score, logic.player2.score)
+        renderAfterMove()
     }
 })
 
 // Player 2 keyboard keys
-$(document).keypress(function (e) {
-    
-    // Invoking i key
-    if (e.which == 105) {
+$(document).keydown(function (e) {
+
+    // Invoking up key
+    if (e.which == 38) {
         logic.movePlayer(2, "up")
-        renderer.renderBoard(logic.matrix)
-        renderer.renderScores(logic.player1.score, logic.player2.score)
+        renderAfterMove()
     }
-    // Invoking k key
-    if (e.which == 107) {
+    // Invoking down key
+    if (e.which == 40) {
         logic.movePlayer(2, "down")
-        renderer.renderBoard(logic.matrix)
-        renderer.renderScores(logic.player1.score, logic.player2.score)
+        renderAfterMove()
     }
-    // Invoking j key
-    if (e.which == 106) {
+    // Invoking left key
+    if (e.which == 37) {
         logic.movePlayer(2, "left")
-        renderer.renderBoard(logic.matrix)
-        renderer.renderScores(logic.player1.score, logic.player2.score)
+        renderAfterMove()
     }
-    // Invoking l key
-    if (e.which == 108) {
+    // Invoking right key
+    if (e.which == 39) {
         logic.movePlayer(2, "right")
-        renderer.renderBoard(logic.matrix)
-        renderer.renderScores(logic.player1.score, logic.player2.score)
+        renderAfterMove()
     }
 })

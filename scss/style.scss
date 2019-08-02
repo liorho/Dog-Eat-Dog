@@ -15,13 +15,12 @@
 
 .header{
     grid-area: h;
-    background-color: $secondary-bright;
+    background-color: white;
     color: $black;
     border: 0.1vw solid $black;
     font-family: $third-font;
     font-size: 4vw;
     font-weight: bold;
-    text-align: center;
 }
 
 
@@ -41,13 +40,12 @@
 }
 
 .player1Score, .player2Score{
-    // margin:auto;
     text-align: center;
     padding-top: 1.5vh;
     font-size: 1.5vw;
     font-weight: bold;
     background-color: $secondary-bright;
- }
+}
 
 .startButton{
     grid-area: s;
@@ -59,37 +57,36 @@
 }
 
 .tile{
-    border: 0.05vw solid grey;
+    border: 0.1vw solid rgb(54, 54, 54);
     height: auto;
+    background-color: rgb(223, 219, 219)
 }
 
 .food{
-    // background-image: url(https://www.wellnesspetfood.com/sites/default/files/2018-06/TruFood%20Make%20it%20Fresh_dog_2.gif);
-    // background-image: url(https://www.wellnesspetfood.com/sites/default/files/inline-images/Complete%20Health%20Gravies_cat_0.gif);
     background-image: url(https://www.hillspet.com/content/dam/pim/hills/en_us/pd/dry/pd-metabolic-canine-lamb-meal-and-rice-formula-dry-productKibble_500.png);
-    background-size: cover;
     background-position: center;
-    background-size: 30%;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
 .player1{
-    background-image: url(https://static.wixstatic.com/media/c03e75_c9dc0151d04e4ff3870d694602304f44~mv2.gif/v1/fill/w_302,h_403,al_c,q_90/file.jpg);
-    background-size: cover;
+    background-image: url(https://media1.giphy.com/media/QLRHGqkSlV6NOL57zV/source.gif);
     background-position: center;
-    background-size: 30%;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
 .player2{
-    // background-image: url(https://media2.giphy.com/media/H1XUAkniijT15flKaD/giphy.gif);
-    // background-image: url(https://i.embed.ly/1/display/resize?width=800&height=800&key=3e750996b20f47be9451da09d3fffa5b&url=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2F8DTEMy7fSrzgI%2Fgiphy.gif);
-    // background-image: url(https://cdn.dribbble.com/users/974793/screenshots/4132585/___2.gif);
-    // background-image: url(https://media3.giphy.com/media/16StbF7VCSw6Y/giphy.webp?cid=790b76115d41e90d4d4b306a73495d5e&rid=giphy.webp);
-    background-image: url(https://media.giphy.com/media/Jnhj5zGkYQfK0/giphy.gif);
-    background-size: cover;
+    background-image: url(https://tchol.org/images/funny-transparent-gif-10.gif);
     background-position: center;
-    background-size: 30%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.wall{
+    background-image: url('/img/wall.jpg');
+    background-position: center;
+    background-size: 100%;
     background-repeat: no-repeat;
 }
 
@@ -114,9 +111,7 @@
         height: 7vh;
         font-size: 2vw;
         text-align: center;
-    }
-
-    
+    }   
 }
 
 .enterSizeButton{
@@ -129,3 +124,31 @@
     margin: auto;
 }
 
+.end-game{
+    position: absolute;
+    background-color: $secondary-bright; 
+    color: $accent;
+    height: 50vh;
+    width: 40vw;
+    top:15vh;
+    left: 30vw;
+    border: 1px solid $secondary-dark;
+    text-align: center;
+    align-content: center;
+    font-weight: bold;
+    font-size: 3vw;
+    padding: 2vw 2vh;
+
+    .game-over{
+        font-size: 4vw;
+        padding-bottom: 0.5vh;
+    }
+    .winner{
+        font-family: $secondary-font;
+        font-size: 8vw;
+    }
+
+    .press-any-key{
+        font-size: 1.5vw;
+    }
+}
