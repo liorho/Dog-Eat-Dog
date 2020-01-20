@@ -37,7 +37,9 @@ input[type=number]::-webkit-outer-spin-button {
   position: relative;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: 'h h h' 'b b b' 'p1 s p2';
+      grid-template-areas: 'h h h'
+ 'b b b'
+ 'p1 s p2';
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: 1fr 25fr 1fr;
@@ -107,6 +109,7 @@ input[type=number]::-webkit-outer-spin-button {
   border: 0.1vw solid #363636;
   height: auto;
   background-color: #dfdbdb;
+  /* background-color: #fcfbdf; */
 }
 
 .food {
@@ -124,7 +127,10 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .player2 {
-  background-image: url(https://tchol.org/images/funny-transparent-gif-10.gif);
+  /* background-image: url(https://media.giphy.com/media/xULW8scdivSq2Smk36/giphy.gif); */
+  /* background-image: url(https://media.giphy.com/media/KFc5gaXXnZdG3tTI6l/giphy.gif); */
+  /* background-image: url(https://media.giphy.com/media/RlGtDvNLkcz73128Jf/giphy.gif); */
+  background-image: url(https://media.giphy.com/media/3ohze3AcCub1agtRDy/giphy.gif);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
