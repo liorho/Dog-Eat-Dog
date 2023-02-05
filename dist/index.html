@@ -1,62 +1,58 @@
 <!DOCTYPE html>
-<html lang='en'>
-
-<head>
-    <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Dog Eat Dog</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Shadows+Into+Light|Saira+Stencil+One&display=swap"
-        rel="stylesheet">
-    <link rel='stylesheet' href='css/style.css'>
-    <link rel='icon' href='img/favicon7.jpg'>
-</head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Shadows+Into+Light|Saira+Stencil+One&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/favicon7.jpg" />
+  </head>
 
-<body>
-    <div id='container'>
-        <div class="header">
-            <img src="img/favicon7.jpg" style="width:5%; height:5%; vertical-align:middle;">
-            <span>DOG EAT DOG</span>
-        </div>
-        <div class="board-container">
-            <img src="https://media.tenor.com/images/901a92a9b26a375cf96fce9f165d247f/tenor.gif" alt="A Dog"
-                style="width:40vw; height:70vh;margin:auto;">
-        </div>
-        <div class="player1Score"></div>
-        <div class="startButton btn">START</div>
-        <div class="player2Score"></div>
-
+  <body>
+    <div id="container">
+      <div class="header">
+        <img src="img/favicon7.jpg" style="width: 5%; vertical-align: middle" />
+        <span>DOG EAT DOG</span>
+      </div>
+      <div class="board-container">
+        <img
+          src="https://media.tenor.com/images/901a92a9b26a375cf96fce9f165d247f/tenor.gif"
+          alt="A Dog"
+          style="width: 40vw; height: 70vh; margin: auto"
+        />
+      </div>
+      <div class="player1Score"></div>
+      <div class="startButton btn">START</div>
+      <div class="player2Score"></div>
     </div>
 
     <div class="boardSize">
-        <div class="question">ENTER THE SIZE OF YOUR HOUSE: <br><br></div>
-        <div class="dimensionsInput">
-            <input class="xInput" type="number"> X <input class="yInput" type="number">
-        </div>
-        <br>
-        <div class="enterSizeButton btn">ENTER</div>
+      <div class="question">ENTER THE SIZE OF YOUR HOUSE (MAX 20x20): <br /><br /></div>
+      <div class="dimensionsInput"><input class="xInput" type="number" /> X <input class="yInput" type="number" /></div>
+      <br />
+      <div class="enterSizeButton btn">ENTER</div>
     </div>
 
     <div class="end-game-message"></div>
 
+    <script id="end-game-template" type="text/x-handlebars-template">
+      <div class='end-game'>
+        <div class='game-over'>GAME OVER<br /></div>
+        <div class='winner'>{{winner.name}}<br /></div>
+        <div>IS THE WINNER</div>
+        <div class='press-any-key'>Press any key<br /></div>
 
-    <script id='end-game-template' type='text/x-handlebars-template'>
-        <div class="end-game">
-            <div class="game-over">GAME OVER<br></div>
-            <div class="winner">{{winner.name}}<br></div>
-            <div>IS THE WINNER</div>
-            <div class="press-any-key">Press any key<br></div>
-            
-        </div>
+      </div>
     </script>
 
-
-    <script src='./jquery/dist/jquery.js'></script>
-    <script src='./handlebars/dist/handlebars.js'></script>
-    <script src='js/Matrix.js'></script>
-    <script src='js/Logic.js'></script>
-    <script src='js/Renderer.js'></script>
-    <script src='js/main.js'></script>
-</body>
-
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="./handlebars/dist/handlebars.js"></script>
+    <script src="js/Matrix.js"></script>
+    <script src="js/canAllPlayersGetToAllItems.js"></script>
+    <script src="js/Logic.js"></script>
+    <script src="js/Renderer.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>

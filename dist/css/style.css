@@ -109,11 +109,10 @@ input[type=number]::-webkit-outer-spin-button {
   border: 0.1vw solid #363636;
   height: auto;
   background-color: #dfdbdb;
-  /* background-color: #fcfbdf; */
 }
 
 .food {
-  background-image: url(https://www.hillspet.com/content/dam/pim/hills/en_us/pd/dry/pd-metabolic-canine-lamb-meal-and-rice-formula-dry-productKibble_500.png);
+  background-image: url("/img/pngegg.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -127,9 +126,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .player2 {
-  /* background-image: url(https://media.giphy.com/media/xULW8scdivSq2Smk36/giphy.gif); */
-  /* background-image: url(https://media.giphy.com/media/KFc5gaXXnZdG3tTI6l/giphy.gif); */
-  /* background-image: url(https://media.giphy.com/media/RlGtDvNLkcz73128Jf/giphy.gif); */
   background-image: url(https://media.giphy.com/media/3ohze3AcCub1agtRDy/giphy.gif);
   background-position: center;
   background-size: contain;
