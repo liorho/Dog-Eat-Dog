@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "dog-eat-dog-40782"
-  }
+    "default": "dog-eat-dog-40782",
+    "staging": "dog-eat-dog-40782"
+  },
+  "targets": {},
+  "etags": {}
 }
