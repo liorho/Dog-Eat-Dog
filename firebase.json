@@ -12,5 +12,27 @@
         "destination": "/server.js"
       }
     ]
-  }
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log"
+      ]
+    },
+    {
+      "source": "dog-eat-dog",
+      "codebase": "dog-eat-dog",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log"
+      ]
+    }
+  ]
 }
